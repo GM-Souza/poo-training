@@ -19,7 +19,7 @@ public class Livros extends ItemBiblioteca{
 
     @Override
     public String mostrarDescricao() {
-        return "Livro: " + titulo + ", " + ano + ", Autor: " + autor;
+        return "Livro: " + getTitulo() + ", " + getAno() + ", Autor: " + getAutor();
     }
 }
 

@@ -8,9 +8,17 @@ public class DVD extends ItemBiblioteca{
         this.duracao = duracao;
     }
 
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
+    }
+
     @Override
     public String mostrarDescricao() {
-        return "DVD: " + titulo + ", " + ano + ", Duração: " + duracao + " min";
+        return "DVD: " + getTitulo() + ", " + getAno() + ", Duração: " + getDuracao() + " min";
     }
 
 }

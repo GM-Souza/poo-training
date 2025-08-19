@@ -6,12 +6,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Usuario {
-    protected String nome;
-    protected List<ItemBiblioteca> itensEmprestados;
+    private String nome;
+    private List<ItemBiblioteca> itensEmprestados;
 
     public Usuario(String nome) {
         this.nome = nome;
         this.itensEmprestados = new ArrayList<>();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     //Metodo abstrato: podeEmprestar() (verifica limite de itens)
@@ -23,9 +31,11 @@ public abstract class Usuario {
     public void emprestarItem(ItemBiblioteca item) {
         if (itensEmprestados.size() < podeEmprestar()) {
             itensEmprestados.add(item);
-            System.out.println(nome+" emprestou: "+item.mostrarDescricao());
+            System.out.println(getNome()+" emprestou: "+item.mostrarDescricao());
         } else {
-            System.out.println(nome + " já atingiu o limite de empréstimos!");
+            System.out.println(getNome() + " já atingiu o limite de empréstimos!");
         }
     }
+
+
 }

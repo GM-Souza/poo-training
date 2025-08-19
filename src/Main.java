@@ -7,7 +7,6 @@ import usuarios.Professor;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
 
         // Criando itens
         DVD dvd = new DVD("Interestelar", 2014, 169);
@@ -24,10 +23,10 @@ public class Main {
         aluno.emprestarItem(dvd);
         aluno.emprestarItem(dvd); // deve bloquear (limite 3)
 
+        System.out.println();
+
         professor.emprestarItem(livros);
         professor.emprestarItem(revista);
         professor.emprestarItem(dvd);
-
-
     }
 }

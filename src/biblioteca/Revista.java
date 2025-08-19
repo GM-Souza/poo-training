@@ -19,6 +19,6 @@ public class Revista extends ItemBiblioteca{
 
     @Override
     public String mostrarDescricao() {
-        return "Revista: " + titulo + ", " + ano + ", Edição: " + edicao;
+        return "Revista: " + getTitulo() + ", " + getAno() + ", Edição: " + getEdicao();
     }
 }
